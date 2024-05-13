@@ -1,0 +1,17 @@
+# version: '3.9'
+services:
+  wiremock:
+    image: wiremock/wiremock
+    container_name: wiremock
+    #restart: unless-stopped
+    ports:
+      - 9085:8080
+    volumes:
+      - ./wiremock:/home/wiremock
+    networks:
+      - net-app
+
+networks:
+  net-app:
+    name: net-app
+    driver: bridge

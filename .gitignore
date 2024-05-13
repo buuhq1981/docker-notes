@@ -1,0 +1,12 @@
+/containers/nginx
+/containers/mysqldb
+/containers/mariadb
+/containers/pgadmin4
+/containers/postgres
+/containers/mongodb
+/containers/rabbitmq
+/containers/redis
+/containers/redisinsight
+/containers/wiremock
+
+/containers/.env
