@@ -10,3 +10,7 @@
 /containers/wiremock
 
 /containers/.env
+/images/exported
+db-samples/*
+!db-samples/mongo-sample-dataset/script.sh
+!db-samples/mysql-sample-data/mysql-import-script.sh

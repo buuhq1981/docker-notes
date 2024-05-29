@@ -1,0 +1,23 @@
+version: '3'
+services:
+  mongo7:
+    image: mongo
+    #restart: unless-stopped
+    container_name: mongo7
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_DATABASE: test
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Password123
+    volumes:
+      - ./db:/data/db
+      - ./config:/data/configdb
+    networks:
+      - net-db
+
+networks:
+  net-db:
+    name: net-db
+    external: true
+    driver: bridge

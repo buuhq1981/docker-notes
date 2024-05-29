@@ -1,0 +1,20 @@
+version: '3'
+services:
+  mysql8:
+    image: mysql
+    #restart: unless-stopped
+    container_name: mysql8
+    volumes:
+      - ./data:/var/lib/mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: Password123
+    networks:
+      - net-db
+    ports:
+      - 3306:3306
+
+networks:
+  net-db:
+    name: net-db
+    external: true
+    driver: bridge
